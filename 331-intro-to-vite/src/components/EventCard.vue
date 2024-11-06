@@ -40,16 +40,18 @@ const router = useRouter();
 </script>
 
 <template>
-  <div class="event-card">
+
  <RouterLink class="event-link" :to="{ name: 'event-detail-view', params:{ id: props.event.id } }">
-       <h2>{{ props.event.title }}</h2>
+  <div class="event-card cursor-pointer border border-gray-600 p-[20px] w-[250px] mb-[18px] hover:scale-101 hover:shadow-sp">
+  <h2>{{ props.event.title }}</h2>
       <span>@{{ props.event.time }} on {{ props.event.date }}</span>
+    </div>
   </RouterLink>
 
 
  <!-- <button @click="editEvent">Edit</button> -->
  <!-- <FlashMessage v-if="showFlashMessage" :message="flashMessage" @close="closeFlashMessage" /> -->
-  </div>
+
 </template>
 
 <style scoped>
@@ -60,6 +62,8 @@ const router = useRouter();
   border: 1px solid #39495c;
   margin-bottom: 18px;
   position: relative;
+
+
 }
 .event-card:hover {
   transform: scale(1.01);

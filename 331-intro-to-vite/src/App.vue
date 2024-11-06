@@ -26,16 +26,17 @@ function navigateWithPageSize(size: number) {
 </script>
 
 <template>
-<div id="layout">
-    <header>
-      <div id="flashMessage" v-if="message">
+  <div class="text-center font-sans text-gray-700 antialias" id="layout">
+      <header>
+       <div id="flashMessage" class="animate-fade" v-if="message">
         <h4>{{ message }}</h4>
       </div>
+          <h1>Deploy with Vercel</h1>
       <div class="wrapper">
-        <nav>
-          <RouterLink to="/">Event</RouterLink> |
-          <RouterLink to="/about">About</RouterLink> |
-          <RouterLink to="/student">Student</RouterLink>
+        <nav class="py-6">
+          <RouterLink class="font-bold text-gray-700" exact-active-class="text-green-500" :to="{ name: 'event-list-view' }">Event</RouterLink> |
+          <RouterLink class="font-bold text-gray-700" exact-active-class="text-green-500" :to="{ name: 'about' }">About</RouterLink>|
+          <RouterLink class="font-bold text-gray-700" exact-active-class="text-green-500" to="/student">Student</RouterLink>
           <div>
             <button class="page-size-btn" @click="navigateWithPageSize(3)">Page Size: 3</button>
           <button class="page-size-btn" @click="navigateWithPageSize(4)">Page Size: 4</button>
