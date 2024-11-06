@@ -26,6 +26,7 @@ function navigateWithPageSize(size: number) {
 </script>
 
 <template>
+  <SpeedInsights />
   <div class="text-center font-sans text-gray-700 antialias" id="layout">
       <header>
        <div id="flashMessage" class="animate-fade" v-if="message">
